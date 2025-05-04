@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "TokenTrimmer: Process Directory",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/token_trimmer.py",
+            "args": [
+                "${workspaceFolder}/input_directory",
+                "${workspaceFolder}/output_directory"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
